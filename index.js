@@ -29,6 +29,10 @@ app.use(function (req, res, next) {
     next();
 });
 
+app.get('/health', function(req, res) {
+  res.send('health OK !!');
+});
+
 app.post("/auth", (req, res) => {
     console.log('req', req.body);
     console.log('file?', req.body.file);
